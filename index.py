@@ -17,7 +17,7 @@ mp_pose = mp.solutions.pose
 
 while run == 'Pose detection':
     _, image = camera.read()
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    #image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     with mp_pose.Pose(min_detection_confidence = 0.5, min_tracking_confidence = 0.5) as pose:
         image.flags.writeable = False
         #image = cv2.cvtColor(image)
@@ -34,7 +34,7 @@ else:
     
 while run == 'Face detection':
     _, image = camera.read()
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    #image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     with mp_face_detection.FaceDetection(model_selection = 0, min_detection_confidence = 0.5) as face_detection:
         image.flags.writeable = False
         #image = cv2.cvtColor(image)
