@@ -1,5 +1,2 @@
-pillow
-numpy
-matplotlib
-opencv-python-headless
+opencv-python
 mediapipe
